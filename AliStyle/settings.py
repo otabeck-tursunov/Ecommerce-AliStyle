@@ -5,8 +5,8 @@ import environ
 env = environ.Env()
 environ.Env.read_env()
 
-ESKIZ_GMAIL = env("ESKIZ_GMAIL")
-ESKIZ_TOKEN = env("ESKIZ_TOKEN")
+# ESKIZ_GMAIL = env("ESKIZ_GMAIL")
+# ESKIZ_TOKEN = env("ESKIZ_TOKEN")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
