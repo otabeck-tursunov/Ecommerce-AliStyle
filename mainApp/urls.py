@@ -6,5 +6,4 @@ urlpatterns = [
     path('subCategories/', SubCategories.as_view(), name='subCategories'),
     path('products/', Products.as_view(), name='products'),
     path('products/<int:pk>/', Product.as_view(), name='product'),
-
 ]
