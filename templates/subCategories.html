@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+	{% load static %}
 <meta charset="utf-8">
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="cache-control" content="max-age=604800" />
@@ -8,24 +9,24 @@
 
 <title>Website title - bootstrap html template</title>
 
-<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="{% static 'images/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
 
 <!-- jQuery -->
-<script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
+<script src="{% static 'js/jquery-2.0.0.min.js' %}" type="text/javascript"></script>
 
 <!-- Bootstrap4 files-->
-<script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}" type="text/javascript"></script>
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
 
 <!-- Font awesome 5 -->
-<link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+<link href="{% static 'fonts/fontawesome/css/all.min.css' %}" type="text/css" rel="stylesheet">
 
 <!-- custom style -->
-<link href="css/ui.css" rel="stylesheet" type="text/css"/>
-<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+<link href="{% static 'css/ui.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet" type="text/css" />
 
 <!-- custom javascript -->
-<script src="js/script.js" type="text/javascript"></script>
+<script src="{% static 'js/script.js' %}" type="text/javascript"></script>
 
 </head>
 <body>
@@ -118,8 +119,8 @@
 				<nav class="row">
 					<div class="col-6">
 						<a href="page-index-1.html">Home page 1</a>
-						<a href="index-without-login.html">Home page 2</a>
-						<a href="kategoriyalar.html">All category</a>
+						<a href="page-index-2.html">Home page 2</a>
+						<a href="page-category.html">All category</a>
 						<a href="page-listing-large.html">Listing list</a>
 						<a href="page-listing-grid.html">Listing grid</a>
 						<a href="page-shopping-cart.html">Shopping cart</a>
@@ -176,148 +177,27 @@
 <!-- ========================= SECTION CONTENT ========================= -->
 <section class="section-content padding-y">
 <div class="container">
-
 <nav class="row">
+
 		<div class="col-md-3">
-			
 			<div class="card card-category">
 			  <div class="img-wrap" style="background: #ffd7d7">
-			  	<img src="images/items/1.jpg">
+
+			  	<img src="rasm.jpg">
+
 			  </div>
 			  <div class="card-body">
-			    <h4 class="card-title"><a href="#">Summer shirts</a></h4>
+			    <h4 class="card-title"><a href="/ichki/3/">Yozgi kiyimlar</a></h4>
 			    <ul class="list-menu">
-			    	<li><a href="">Unisex T shirts</a></li>
-					<li><a href="">Casual shirts</a></li>
-					<li><a href="">Scherf Ice cream</a></li>
-					<li><a href="">Another category</a></li>
-					<li><a href="">Great items name</a></li>
-					<li><a href="">Great items name</a></li>
+
+			    	<li><a href="/mahsulot/5/">Futbolka</a></li>
+
 			    </ul>
 			  </div>
 			</div>
 		</div> <!-- col.// -->
-		<div class="col-md-3">
-			<div class="card card-category">
-			  <div class="img-wrap" style="background: #FFF68D">
-			  	<img src="images/items/2.jpg">
-			  </div>
-			  <div class="card-body">
-			    <h4 class="card-title"><a href="#">Winter jackets</a></h4>
-			    <ul class="list-menu">
-			    	<li><a href="">Leather jackets</a></li>
-					<li><a href="">Men's jackets</a></li>
-					<li><a href="">Heating battery clothes</a></li>
-					<li><a href="">Jeans jackets</a></li>
-					<li><a href="">Great items name</a></li>
-			    </ul>
-			  </div>
-			</div>
-		</div> <!-- col.// -->
-		<div class="col-md-3">
-			<div class="card card-category">
-			  <div class="img-wrap" style="background: #bcffb8">
-			  	<img src="images/items/3.jpg">
-			  </div>
-			  <div class="card-body">
-			    <h4 class="card-title"><a href="#">Shorts</a></h4>
-			    <ul class="list-menu">
-			    	<li><a href="">Jeans shorts</a></li>
-					<li><a href="">Swimming shorts</a></li>
-					<li><a href="">Another some shorts</a></li>
-					<li><a href="">Another category</a></li>
-			    </ul>
-			  </div>
-			</div>
-		</div> <!-- col.// -->
-		<div class="col-md-3">
-			<div class="card card-category">
-			  <div class="img-wrap" style="background: #c9fff3">
-			  	<img src="images/items/4.jpg">
-			  </div>
-			  <div class="card-body">
-			    <h4 class="card-title"><a href="#">Travel bags </a></h4>
-			    <ul class="list-menu">
-			    	<li><a href="">Leather bags</a></li>
-					<li><a href="">Cook & Hold ovens</a></li>
-					<li><a href="">Scherf Ice cream</a></li>
-					<li><a href="">Another category</a></li>
-					<li><a href="">Great items name</a></li>
-			    </ul>
-			  </div>
-			</div>
-		</div> <!-- col.// -->
-		<div class="col-md-3">
-			<div class="card card-category">
-			  <a href="#" class="img-wrap" style="background: #ddffeb">
-			  	<img src="images/items/5.jpg">
-			  </a>
-			  <div class="card-body">
-			    <h4 class="card-title"><a href="#">Great items</a></h4>
-			    <ul class="list-menu">
-			    	<li><a href="">Combi steamers</a></li>
-					<li><a href="">Cook & Hold ovens</a></li>
-					<li><a href="">Scherf Ice cream</a></li>
-					<li><a href="">Another category</a></li>
-					<li><a href="">Great items name</a></li>
-			    </ul>
-			  </div>
-			</div>
-		</div> <!-- col.// -->
-		<div class="col-md-3">
-			<div class="card card-category">
-			  <a href="#" class="img-wrap" style="background: #dee4ff">
-			  	<img src="images/items/6.jpg">
-			  </a>
-			  <div class="card-body">
-			    <h4 class="card-title"><a href="#">Kitchen furniture</a></h4>
-			    <ul class="list-menu">
-			    	<li><a href="">Combi steamers</a></li>
-					<li><a href="">Cook & Hold ovens</a></li>
-					<li><a href="">Scherf Ice cream</a></li>
-					<li><a href="">Another category</a></li>
-					<li><a href="">Great items name</a></li>
-			    </ul>
-			  </div>
-			</div>
-		</div> <!-- col.// -->
-		<div class="col-md-3">
-			<div class="card card-category">
-			  <a href="#" class="img-wrap" style="background: #ddffeb">
-			  	<img src="images/items/2.jpg">
-			  </a>
-			  <div class="card-body">
-			    <h4 class="card-title"><a href="#">Great items</a></h4>
-			    <ul class="list-menu">
-			    	<li><a href="">Combi steamers</a></li>
-					<li><a href="">Cook & Hold ovens</a></li>
-					<li><a href="">Scherf Ice cream</a></li>
-					<li><a href="">Another category</a></li>
-					<li><a href="">Great items name</a></li>
-			    </ul>
-			  </div>
-			</div>
-		</div> <!-- col.// -->
-		<div class="col-md-3">
-			<div class="card card-category">
-			  <a href="#" class="img-wrap" style="background: #dee4ff">
-			  	<img src="images/items/1.jpg">
-			  </a>
-			  <div class="card-body">
-			    <h4 class="card-title"><a href="#">Other clothes</a></h4>
-			    <ul class="list-menu">
-			    	<li><a href="">Jeans shorts</a></li>
-					<li><a href="">Cook & Hold ovens</a></li>
-					<li><a href="">Scherf Ice cream</a></li>
-					<li><a href="">Another category</a></li>
-					<li><a href="">Great items name</a></li>
-			    </ul>
-			  </div>
-			</div>
-		</div> <!-- col.// -->
+
 	</nav> <!-- row.// -->
-
-
 </div> <!-- container .//  -->
 </section>
 <!-- ========================= SECTION CONTENT END// ========================= -->
