@@ -25,7 +25,7 @@ class LoginView(View):
                 print("login boldi")
                 return redirect('home')
             return redirect('confirm')
-        return render(request, 'login.html')
+        return redirect('login')
 
 
 class RegisterView(View):
@@ -54,7 +54,7 @@ class RegisterView(View):
         )
         client = SMSClient(
             api_url="https://notify.eskiz.uz/api/",
-            email=settings.ESKIZ_GMAIL,
+            email="tursunovotabekkuva@gmail.com",
             password=settings.ESKIZ_TOKEN,
         )
         client._send_sms(

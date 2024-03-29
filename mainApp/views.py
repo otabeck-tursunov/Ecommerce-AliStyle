@@ -1,17 +1,21 @@
 from django.shortcuts import render
 from django.views import *
 
-from mainApp.models import *
+from .models import *
 
 
 class Home(View):
     def get(self, request):
+        categories = Category.objects.all()
         if request.user.is_authenticated:
-            return render(request, 'index-main.html')
-        return render(request, 'index-without-login.html')
+            context = {
+                'categories': categories
+            }
+            return render(request, 'home.html', context)
+        return render(request, 'home-unauth.html')
 
 
-class Categories(View):
+class CategoriesView(View):
     def get(self, request):
         categories = Category.objects.all()
         subCategories = SubCategory.objects.all()
@@ -23,7 +27,7 @@ class Categories(View):
         return render(request, 'categories.html', context)
 
 
-class SubCategories(View):
+class SubCategoriesView(View):
     def get(self, request):
         subCategories = []
         context = {
@@ -32,16 +36,18 @@ class SubCategories(View):
         return render(request, 'subCategories.html', context)
 
 
-class Products(View):
+class ProductsView(View):
     def get(self, request):
-        products = []
+        products = Product.objects.all()
+        if request.GET.get('category_id'):
+            products = products.filter(category__id=request.GET.get('category_id'))
         context = {
             'products': products
         }
         return render(request, 'products.html', context)
 
 
-class Product(View):
+class ProductView(View):
     def get(self, request, pk):
         product = "Salom"
         context = {
